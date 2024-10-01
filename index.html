@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/luis-high-resolution-logo.png"  class="logo">
+            <ul> 
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>  
+                <li><a href="#">Services</a></li>  
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Portfolio Website</p>
+            <h1>Hi, My name is <span>Luis</span> Marquez</h1>
+
+         </div>
+
+
+    </div>
+
+
+
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Pregraduate3.png">
+            </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I'm a veteran student pursuing a Bachelor's Degree in Computer Science,
+                        I was born in Guadalajara, Mexico. </p>
+
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Professional Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+                     <div class="tab-contents active-tab" id= "skills">
+                        <ul>
+                            <li><span>Troubleshooting</span><br>Resolve Technical issues</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Attention to Detail</span><br>Make sure a task is accomplish with precision</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id= "experience">
+                        <ul>
+                            <li><span>2024 - Present</span><br>Construction Management Intern at Nevada SBDC</li>
+                            <li><span>2020 - 2023</span><br>HVAC Mechanic at US ARMY</li>
+                            <li><span>2019 - 2020</span><br>Customer Service Associate at Raising Canes</li>
+                            <li><span>2018 - 2019</span><br>Sales Associate</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id= "education">
+                        <ul>
+                            <li><span>2027</span><br>BS Computer Science at UNLV</li>
+            
+                </div>
+            
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active.link");
+    document.getElementById(tabname).classList.add("active-tab");
+
+
+  }
+
+</script>
+
+
+</body>
+</html>
